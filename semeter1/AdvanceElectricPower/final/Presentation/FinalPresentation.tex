@@ -238,9 +238,12 @@
 
 \begin{frame}{Review Objective}
 	\begin{itemize}
+		\setlength{\itemsep}{10pt}
 		\footnotesize
 		\item {Three-Phase multi-level Inverter}
 		\begin{itemize}
+			\setlength{\itemsep}{10pt}
+			\footnotesize
 			\item{Diode clamped Inverter}
 			\item{Flyting capacitor Inverter}
 			\item{Cascaded H-Bridge Inverter}
@@ -249,6 +252,8 @@
 		\item{Single DC source with single phase transformer H-Bridge (topology 2)}
 		\item{Modulation techniques}
 		\begin{itemize}
+			\setlength{\itemsep}{10pt}
+			\footnotesize
 			\item {phase disposition (PD)}
 			\item {phase opposite disposition (POD)}
 			\item {alternate phase opposite disposition (APOD)}
@@ -270,9 +275,11 @@
 
 \begin{frame}{Introduction about three-Phase Inverter}
 	\begin{itemize}
+		\setlength{\itemsep}{10pt}
 		\item {The three-phase converter include voltage source Inverter (VSI) and current source Inverter (CSI)}
 		\item {voltage source Inverter (VSI)}
 		\begin{itemize}
+			\setlength{\itemsep}{10pt}
 			\item {fundamental three-phase Inverter with 2 level}
 			\item {multi-level three-phase Inverter (3, 5, or 7 level)}
 		\end{itemize}
@@ -285,10 +292,46 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Three-Phase multi-level Inverter with Diode clamped Inverter}
+	\begin{itemize}
+		\setlength{\itemsep}{10pt}
+		\item {three phase multi-level 5 steps using diode clamped Inverter}
+		\item {Using single source DC and containing DC bus voltage with 4 capacitor C1, C2, C3, and C4}
+		\item {Each capacitor have one supply voltage and single capacitor voltage is limited by the voltage stress from switches}
+		\item {using cascaded diodes to connect from switches S' to S}
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Three-Phase multi-level Inverter with Flyting capacitor Inverter}
 	\begin{figure}
 		\includegraphics[width=0.6\linewidth]{flyingcap.png}
 	\end{figure}
+\end{frame}
+
+\begin{frame}{Three-Phase multi-level Inverter with Flyting capacitor Inverter}
+	\begin{itemize}
+		\setlength{\itemsep}{10pt}
+		\item {three phase multi-level 5 steps using Flyting capacitor Inverter}
+		\item {Using single source DC and containing DC bus voltage with 4 capacitor C1, C2, C3, and C4}
+		\item {Each capacitor have one supply voltage and single capacitor voltage is limited by the voltage stress from switches}
+		\item {using cascaded capacitor to connect from switches S' to S}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Multiple DC sources with H-Bridge Inverter}
+	\begin{figure}
+		\includegraphics[width=0.7\linewidth]{cascade_Hbridge.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Multiple DC sources with H-Bridge Inverter}
+	\begin{itemize}
+		\setlength{\itemsep}{10pt}
+		\item {Using Multiple DC source for each full-Bridge Inverters}
+		\item {containing 6 full-Bridge Inverters that divide to three level}
+		\item {The cascaded level 1, 2, and 3 corresponding with phase A, B, and C respectively}
+		\item {The drawback of Multi-DC source H-Bridge Inverter is using a lot of DC source}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Single DC source with single phase transformer H-Bridge (topology 1)}
@@ -297,16 +340,50 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Single DC source with single phase transformer H-Bridge (topology 1)}
+	\begin{itemize}
+		\setlength{\itemsep}{10pt}
+		\item {Using only one DC source for a System}
+		\item {transformers are imported between levels to gain amplification of output signal}
+		\item {The cascaded level 1, 2, and 3 corresponding with phase A, B, and C respectively}
+		\item {the benefit of this System is using only a single DC source}
+	\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Single DC source with single phase transformer H-Bridge (topology 2)}
 	\begin{figure}
 		\includegraphics[width=0.6\linewidth]{Topology2.png}
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Single DC source with single phase transformer H-Bridge (topology 2)}
+	\begin{itemize}
+		\setlength{\itemsep}{8pt}
+		\item {Using only one DC source for a System}
+		\item {transformers are imported between levels to gain amplification of output signal}
+		\item {The cascaded level 1, 2, and 3 corresponding with phase A, B, and C respectively}
+		\item {Three phase transformer 2 (below) is connected directly to LOAD}
+		\item {in terms of increasing voltage level by connecting the second terminal of the transformer 2 to ouput LOAD
+		that is the advantage of topology 2 comparing with topology 1}
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Modulation techniques}
     \begin{figure}
         \includegraphics[width=0.45\linewidth]{PWD.png}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Modulation techniques}
+    \begin{itemize}
+		\item {We forcus on three methods using PWD control level shift}
+		\begin{itemize}
+			\setlength{\itemsep}{10pt}
+			\item {\textbf{PD:} this method reduces dramatically THD of the three-phase multi-level Inverter. However, the drawback of this method increases common mode.}
+			\item {\textbf{POD and APOD:} By the Contrast, both methodologies will increase THD and reduce the common mode}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 
@@ -352,21 +429,6 @@
 \include{sections/section3}
 \include{sections/section4}
 
-%----------------------------------------------------------------------------------------
-%	SLIDE
-%----------------------------------------------------------------------------------------
-
-
-\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
-	\begin{center}
-		{}
-            
-	\end{center}
-\end{frame}
-
-
-
-
 
 %----------------------------------------------------------------------------------------
 %	CLOSING SLIDE
@@ -374,7 +436,9 @@
 
 \begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
 	\begin{center}
-		{\Huge Thanks for your attention}
+		{\Huge \textbf{Thanks for your attention}} \\
+		\vspace{30px}
+		{\textbf{Presentation: Huan Nguyen-Duy}}
             
 	\end{center}
 \end{frame}
