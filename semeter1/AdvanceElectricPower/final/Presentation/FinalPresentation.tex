@@ -44,7 +44,7 @@
 %\usetheme{Bergen}
 %\usetheme{Berkeley}
 %\usetheme{Berlin}
-\usetheme{Boadilla}
+%\usetheme{Boadilla}
 %\usetheme{CambridgeUS}
 %\usetheme{Copenhagen}
 %\usetheme{Darmstadt}
@@ -64,7 +64,7 @@
 %\usetheme{Rochester}
 %\usetheme{Singapore}
 %\usetheme{Szeged}
-%\usetheme{Warsaw}
+\usetheme{Warsaw}
 
 %----------------------------------------------------------------------------------------
 %	SELECT COLOR THEME
@@ -73,7 +73,7 @@
 % Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
 
 %\usecolortheme{albatross}
-%\usecolortheme{beaver}   % red
+\usecolortheme{beaver}   % red
 %\usecolortheme{beetle}
 %\usecolortheme{crane}   % yellow
 %\usecolortheme{dolphin}  % purple
@@ -84,7 +84,7 @@
 %\usecolortheme{seagull}
 %\usecolortheme{seahorse}
 %\usecolortheme{spruce}   % green
-\usecolortheme{whale}
+%\usecolortheme{whale}
 %\usecolortheme{wolverine}
 
 %----------------------------------------------------------------------------------------
@@ -199,7 +199,7 @@
 \section{Overview}
 \begin{frame}{Abstract}
 	\begin{itemize}
-		\footnotesize
+		\scriptsize
 		\item{To mention the vital role of power electronic converter in the power production domain}
 		\item{The paper reveiews methodologies to control \textbf{three-phase multi-level Inverter} by PWD control techniques}    
 		\item{Proposal \textbf{three-phase multi-level Inverter topologies} and \textbf{Modulation Techniques}}
@@ -212,7 +212,7 @@
 
 \begin{frame}{Reference Papers}
 	\begin{itemize}
-		\footnotesize
+		\scriptsize
 		\item{Anup Kumar Panda and Yellasiri Suresh, “Research on cascaded
 		multilevel inverter with single DC source by using three-phase
 		transformers,” Electrical Power and Energy Systems. no 40, pp. 9–20,
@@ -236,14 +236,20 @@
 	\end{itemize}
 \end{frame}
 
+
+
+%----------------------------------------------------------------------------------------
+%	Introduction Slides
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
 \begin{frame}{Review Objective}
 	\begin{itemize}
+		\scriptsize
 		\setlength{\itemsep}{10pt}
-		\footnotesize
 		\item {Three-Phase multi-level Inverter}
 		\begin{itemize}
-			\setlength{\itemsep}{10pt}
-			\footnotesize
+			\scriptsize
 			\item{Diode clamped Inverter}
 			\item{Flyting capacitor Inverter}
 			\item{Cascaded H-Bridge Inverter}
@@ -252,8 +258,7 @@
 		\item{Single DC source with single phase transformer H-Bridge (topology 2)}
 		\item{Modulation techniques}
 		\begin{itemize}
-			\setlength{\itemsep}{10pt}
-			\footnotesize
+			\scriptsize
 			\item {phase disposition (PD)}
 			\item {phase opposite disposition (POD)}
 			\item {alternate phase opposite disposition (APOD)}
@@ -261,12 +266,32 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\scriptsize
+		\setlength{\itemsep}{10pt}
+		\item {The paper sets the target that can propose the topologies Inverter aim reduce cost, size, and weight}
+			\begin{itemize}
+				\scriptsize
+				\item {Reducing the number of active switches}
+				\item {Decreasing source components such as DC source}
+				\item {Esailer to control}
+			\end{itemize}
+		\item{finding a solution to design three phase Inverter using signle DC source}
+		\begin{itemize}
+			\scriptsize
+			\item {Topology designs used to enhance the output voltage without increasing the number of levels}
+			\item {Having ablility to adapt for utility applications}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 
 %----------------------------------------------------------------------------------------
-%	Introduction Slides
+%	Contents Slides
 %----------------------------------------------------------------------------------------
 
-\section{Introduction}
+\section{Contents}
 \begin{frame}{Introduction about three-Phase Inverter}
 	\begin{figure}
 		\includegraphics[width=0.7\linewidth]{introthreephaseinverter.png}
@@ -386,26 +411,97 @@
 	\end{itemize}
 \end{frame}
 
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	Content Slides
-%----------------------------------------------------------------------------------------
-
-\section{Content}
-\begin{frame}{Diode clamped Inverter}
-	
+\begin{frame}{Simulation three phase 5 level with Diode clamped Inverter}
+    \begin{figure}
+        \includegraphics[width=1\linewidth]{simulation_Schematic.png}
+    \end{figure}
 \end{frame}
 
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------
 %	Result Slides
 %----------------------------------------------------------------------------------------
 
 \section{Result}
-\begin{frame}{Content}
+\begin{frame}{Five level three phase Inverter output voltage using APOD}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{APOD_V_C.png}
+		\end{figure}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{APOD_V_C_3.png}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{APOD_THD.png}
+		\end{figure}
+		\begin{itemize}
+			\scriptsize
+			\item {figures depicts the outut voltage and current in 1 phase and 3 phases}
+			\item {THD = 2.48\% by APOD control algorithm}
+		\end{itemize}
+	\end{column}
+\end{frame}
+
+\begin{frame}{Five level three phase Inverter output voltage using PD}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{PD_V_C.png}
+		\end{figure}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{PD_V_C_3.png}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{PD_THD.png}
+		\end{figure}
+		\begin{itemize}
+			\scriptsize
+			\item {figures depicts the outut voltage and current in 1 phase and 3 phases}
+			\item {THD = 2.43\% by PD control algorithm}
+		\end{itemize}
+	\end{column}
+\end{frame}
+
+\begin{frame}{Five level three phase Inverter output voltage using POD}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{POD_V_C.png}
+		\end{figure}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{POD_V_C_3.png}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\linewidth]{POD_THD.png}
+		\end{figure}
+		\begin{itemize}
+			\scriptsize
+			\item {figures depicts the outut voltage and current in 1 phase and 3 phases}
+			\item {THD = 2.44\% by POD control algorithm}
+		\end{itemize}
+	\end{column}
+\end{frame}
+
+\begin{frame}{comparing THD}
+	\begin{table}[htbp]
+		\centering
+		\caption{Comparing THD among methodologies}
+		\label{tab:example}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			PWM techniques & APOD & PD & POD \\
+			\hline
+			THD & 2.48\% & 2.43\% & 2.44\% \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}{5 level three phase Inverter simulation Result}
 	
 \end{frame}
 
