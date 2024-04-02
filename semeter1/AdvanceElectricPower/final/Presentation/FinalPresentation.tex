@@ -31,7 +31,7 @@
 \graphicspath{{img/}} % Specifies where to look for included images (trailing slash required)
 
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
-
+\usepackage{mathrsfs}
 %----------------------------------------------------------------------------------------
 %	SELECT LAYOUT THEME
 %----------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@
 % Beamer comes with a number of color themes that can be applied to any layout theme to change its colors. Uncomment each of these in turn to see how they change the colors of your selected layout theme.
 
 %\usecolortheme{albatross}
-\usecolortheme{beaver}   % red
+%\usecolortheme{beaver}   % red
 %\usecolortheme{beetle}
 %\usecolortheme{crane}   % yellow
 %\usecolortheme{dolphin}  % purple
@@ -84,7 +84,7 @@
 %\usecolortheme{seagull}
 %\usecolortheme{seahorse}
 %\usecolortheme{spruce}   % green
-%\usecolortheme{whale}
+\usecolortheme{whale}
 %\usecolortheme{wolverine}
 
 %----------------------------------------------------------------------------------------
@@ -424,6 +424,7 @@
 
 \section{Result}
 \begin{frame}{Five level three phase Inverter output voltage using APOD}
+	\begin{columns}
 	\begin{column}{0.5\textwidth}
 		\begin{figure}
 			\includegraphics[width=1\linewidth]{APOD_V_C.png}
@@ -442,15 +443,17 @@
 			\item {THD = 2.48\% by APOD control algorithm}
 		\end{itemize}
 	\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{Five level three phase Inverter output voltage using PD}
+	\begin{columns}
 	\begin{column}{0.5\textwidth}
 		\begin{figure}
-			\includegraphics[width=1\linewidth]{PD_V_C.png}
+			\includegraphics[width=0.8\linewidth]{PD_V_C.png}
 		\end{figure}
 		\begin{figure}
-			\includegraphics[width=1\linewidth]{PD_V_C_3.png}
+			\includegraphics[width=0.8\linewidth]{PD_V_C_3.png}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.5\textwidth}
@@ -463,15 +466,17 @@
 			\item {THD = 2.43\% by PD control algorithm}
 		\end{itemize}
 	\end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Five level three phase Inverter output voltage using POD}
+	\begin{columns}	
 	\begin{column}{0.5\textwidth}
 		\begin{figure}
-			\includegraphics[width=1\linewidth]{POD_V_C.png}
+			\includegraphics[width=0.8\linewidth]{POD_V_C.png}
 		\end{figure}
 		\begin{figure}
-			\includegraphics[width=1\linewidth]{POD_V_C_3.png}
+			\includegraphics[width=0.8\linewidth]{POD_V_C_3.png}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.5\textwidth}
@@ -484,6 +489,7 @@
 			\item {THD = 2.44\% by POD control algorithm}
 		\end{itemize}
 	\end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{comparing THD}
@@ -495,10 +501,11 @@
 			\hline
 			PWM techniques & APOD & PD & POD \\
 			\hline
-			THD & 2.48\% & 2.43\% & 2.44\% \\
+			The percentage of THD & 2.48\% & 2.43\% & 2.44\% \\
 			\hline
 		\end{tabular}
 	\end{table}
+	\scriptsize{The THD value controled by PD is lower than APOD and POD algorithms}
 \end{frame}
 
 \begin{frame}{5 level three phase Inverter simulation Result}
@@ -532,7 +539,7 @@
 
 \begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
 	\begin{center}
-		{\Huge \textbf{Thanks for your attention}} \\
+		{\Huge \textbf{Thank You for your attention}} \\
 		\vspace{30px}
 		{\textbf{Presentation: Huan Nguyen-Duy}}
             
