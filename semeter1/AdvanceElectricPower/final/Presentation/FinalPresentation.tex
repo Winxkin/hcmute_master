@@ -259,6 +259,7 @@
 		\item{Modulation techniques}
 		\begin{itemize}
 			\scriptsize
+			\item {phase shift (PS)}
 			\item {phase disposition (PD)}
 			\item {phase opposite disposition (POD)}
 			\item {alternate phase opposite disposition (APOD)}
@@ -521,17 +522,140 @@
 	\end{center}
 \end{frame}
 
-\begin{frame}{5 level three phase Inverter simulation Result}
-	
+\begin{frame}{simulation 5 level three phase Inverter using PD method}
+	\scriptsize{\textbf{The input source control setting}}
+	\begin{figure}
+        \includegraphics[width=0.8\linewidth]{Sim_PD_source.png}
+    \end{figure}
 \end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PD method}
+	\scriptsize{\textbf{The output in three phase in time domain}}
+	\begin{figure}
+        \includegraphics[width=1\linewidth]{Sim_PD_out3p.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PD method}
+	\scriptsize{\textbf{The output in three phase in frequency domain}}
+	\begin{figure}
+        \includegraphics[width=1\linewidth]{Sim_PD_FFT.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PD method}
+	\begin{table}[htbp]
+		\centering
+		\caption{THD}
+		\label{tab:example}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			VAG & VBG & VCG & VAB & VAC & VBA \\
+			\hline
+			1.22 & 1.29 & 2.07 & 3.42 & 5.36 & 3.42 \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using POD method}
+	\scriptsize{\textbf{The input source control setting}}
+	\begin{figure}
+        \includegraphics[width=0.7\linewidth]{Sim_POD_source.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using POD method}
+	\scriptsize{\textbf{The output in three phase in time domain}}
+	\begin{figure}
+        \includegraphics[width=1\linewidth]{Sim_POD_out3p.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using POD method}
+	\scriptsize{\textbf{The output in three phase in frequency domain}}
+	\begin{figure}
+        \includegraphics[width=1\linewidth]{Sim_POD_FFT.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using POD method}
+	\begin{table}[htbp]
+		\centering
+		\caption{THD}
+		\label{tab:example}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			VAG & VBG & VCG & VAB & VAC & VBA \\
+			\hline
+			1.81 & 1.73 & 1.37 & 9.48 & 4.68 & 9.48 \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PS method}
+	\scriptsize{\textbf{The input source control setting}}
+	\begin{figure}
+        \includegraphics[width=0.7\linewidth]{Sim_PS_source.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PS method}
+	\scriptsize{\textbf{The output in three phase in time domain}}
+	\begin{figure}
+        \includegraphics[width=1\linewidth]{Sim_PS_out3p.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PS method}
+	\scriptsize{\textbf{The output in three phase in frequency domain}}
+	\begin{figure}
+        \includegraphics[width=1\linewidth]{Sim_PS_FFT.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{simulation 5 level three phase Inverter using PS method}
+	\begin{table}[htbp]
+		\centering
+		\caption{THD}
+		\label{tab:example}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			VAG & VBG & VCG & VAB & VAC & VBA \\
+			\hline
+			7.35 & 2.3 & 1.8 & 5.32 & 5.04 &  5.32 \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	Result Slides
 %----------------------------------------------------------------------------------------
 
 \section{Conclusion}
-\begin{frame}{Content}
-	
+\begin{frame}{Review THD}
+	\begin{table}[htbp]
+		\centering
+		\caption{Comparing THD among POD, PD, and PS algorithms}
+		\label{tab:example}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			 Algorithm & VAG & VBG & VCG & VAB & VAC & VBA \\
+			\hline
+			 PS & 7.35 & 2.3 & 1.8 & 5.32 & \textbf{5.04} &  5.32 \\
+			\hline
+			 POD & 1.81 & 1.73 & \textbf{1.37} & 9.48 & 4.68 & 9.48 \\
+			 \hline
+			 PD & \textbf{1.22} & \textbf{1.29} & 2.07 & \textbf{3.42} & 5.36 & \textbf{3.42} \\
+			 \hline
+		\end{tabular}
+	\end{table}
 \end{frame}
 
 
